@@ -33,10 +33,10 @@ This is a normal flutter app. You should follow the instructions in the [officia
 * CRUD: create, update and remove todo with Sqlite!
 
 ## Screenshoots
-[Halaman Utama](/screenshoots/photo6307835528254434016.jpg)
-[Halaman Tambah](/screenshoots/photo6307835528254434017.jpg)
-[Halaman List Todo](/screenshoots/photo6307835528254434014.jpg)
-[Halaman Update](/screenshoots/photo6307835528254434012.jpg)
+![Halaman Utama](/screenshoots/photo6307835528254434016.jpg)
+![Halaman Tambah](/screenshoots/photo6307835528254434017.jpg)
+![Halaman List Todo](/screenshoots/photo6307835528254434014.jpg)
+![Halaman Update](/screenshoots/photo6307835528254434012.jpg)
 
 ## Bugs and feature requests
 
