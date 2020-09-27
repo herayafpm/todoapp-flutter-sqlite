@@ -1,16 +1,21 @@
-# todoapp
+# Todo App
 
-A new Flutter project.
+Sebuah aplikasi yang dibuat menggunakan flutter, dan database sqlite, sekaligus penggunaan BLOC
 
-## Getting Started
+## Screenshoots
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## Usage
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+```dart
+import foobar
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+foobar.pluralize('word') # returns 'words'
+foobar.pluralize('goose') # returns 'geese'
+foobar.singularize('phenomena') # returns 'phenomenon'
+```
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
+
+## Note
