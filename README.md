@@ -1,11 +1,11 @@
-<p align="center">
+<p>
   <a href="https://flutter.io/">
     <img src="https://diegolaballos.com/files/images/flutter-icon.jpg" alt="Logo" width=72 height=72>
   </a>
 
-  <h3 align="center">Flutter Todo App</h3>
+  <h3>Flutter Todo App</h3>
 
-  <p align="center">
+  <p>
     Sebuah aplikasi todo yang dibuat menggunakan flutter, dan database sqlite, sekaligus penggunaan BLOC
     <br>
     <br>
