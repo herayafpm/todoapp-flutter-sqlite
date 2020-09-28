@@ -52,6 +52,13 @@ class ListTodoController extends GetxController {
 
 class ListTodoView extends GetView<ListTodoController> {
   TodoBlocBloc todoBlocBloc;
+  ScrollController scrollController2;
+
+  void onScroll() {
+    double maxScroll = scrollController2.position.maxScrollExtent;
+    double currentScroll = scrollController2.position.pixels;
+    if (currentScroll == maxScroll) todoBlocBloc..add(TodoBlocGetList());
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -65,6 +72,8 @@ class ListTodoView extends GetView<ListTodoController> {
                 maxChildSize: 0.85,
                 builder:
                     (BuildContext context, ScrollController scrollController) {
+                  scrollController2 = scrollController;
+                  scrollController2.addListener(onScroll);
                   return Parent(
                     style: ParentStyle()
                       ..borderRadius(topLeft: 20, topRight: 20)
@@ -74,12 +83,24 @@ class ListTodoView extends GetView<ListTodoController> {
                       children: [
                         Container(
                             child: ListView.builder(
-                                controller: scrollController,
-                                itemCount: todoBlocListLoaded.listTodo.length,
-                                itemBuilder: (BuildContext context, int index) {
-                                  return ItemListTodo(
-                                      todoBlocListLoaded.listTodo[index]);
-                                })),
+                                controller: scrollController2,
+                                itemCount: (todoBlocListLoaded.hasReachMax)
+                                    ? todoBlocListLoaded.listTodo.length
+                                    : todoBlocListLoaded.listTodo.length + 1,
+                                itemBuilder: (BuildContext context,
+                                        int index) =>
+                                    (index < todoBlocListLoaded.listTodo.length)
+                                        ? ItemListTodo(
+                                            todoBlocListLoaded.listTodo[index])
+                                        : Container(
+                                            child: Center(
+                                                child: SizedBox(
+                                              width: 30,
+                                              height: 30,
+                                              child:
+                                                  CircularProgressIndicator(),
+                                            )),
+                                          ))),
                         Positioned(
                           top: -30,
                           right: 10,
